@@ -1,4 +1,10 @@
-import { $ } from 'https://cdn.jsdelivr.net/npm/qthtml';
+const $ = (selector) =>
+{
+    const el = document.querySelector(selector)
+    el.render = (html) => el.innerHTML = html
+    el.inject = (html) => el.insertAdjacentHTML('beforeend', html)
+    return el;
+};
 
 var QTModal = {
     html: `
