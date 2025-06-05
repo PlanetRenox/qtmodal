@@ -2,7 +2,7 @@ const $ = (selector) =>
 {
     const el = document.querySelector(selector)
     el.render = (html) => el.innerHTML = html
-    el.inject = (html) => el.insertAdjacentHTML('beforeend', html)
+    el.ontop = (html) => el.insertAdjacentHTML('beforebegin', html)
     return el;
 };
 
@@ -13,6 +13,6 @@ var QTModal = {
         Loading...
       </div>
     </div>`,
-    show: () => $(`body`).inject(QTModal.html),
+    show: () => $(`body`).ontop(QTModal.html),
     hide: () => $('#qtmodal')?.remove()
 }
