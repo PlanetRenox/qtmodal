@@ -1,4 +1,4 @@
-const $ = (selector) =>
+const h32kn$ = (selector) =>
 {
     const el = document.querySelector(selector)
     el.render = (html) => el.innerHTML = html
@@ -13,6 +13,6 @@ var QTModal = {
         Loading...
       </div>
     </div>`,
-    show: () => $(`body`).ontop(QTModal.html),
-    hide: () => $('#qtmodal')?.remove()
+    show: () => h32kn$(`body`).ontop(QTModal.html),
+    hide: () => h32kn$('#qtmodal')?.remove()
 }
